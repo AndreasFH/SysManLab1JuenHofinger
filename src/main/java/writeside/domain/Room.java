@@ -1,9 +1,16 @@
 package writeside.domain;
 
-public class Room {
+
+
+public class Room  {
 
   private String roomNr;
   private int roomSize;
+
+  public Room(String roomNr, int roomSize){
+    this.roomNr = roomNr;
+    this.roomSize = roomSize;
+  }
 
   public String getRoomNr() {
     return roomNr;

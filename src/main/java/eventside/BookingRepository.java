@@ -7,9 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+@Component
 public class BookingRepository {
 
   private HashMap<String, BookingEvent> bookings = new HashMap<String, BookingEvent>();
@@ -38,7 +40,7 @@ public class BookingRepository {
         .uri("/events/cancelbooking")
         .contentType(MediaType.APPLICATION_JSON)
         .accept(MediaType.APPLICATION_JSON)
-        .body(Mono.just(booking),BookingEvent.class)
+        .body(Mono.just(booking.getBookingNr()),String.class)
         .retrieve()
         .bodyToMono(Boolean.class)
         .block();
