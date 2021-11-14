@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/vicih/OneDrive/Desktop/5_Semester_Informatik_BSc/Systemarchitektur/Seminar/Seminar_01/SysManLab1JuenHofinger/src/main/java</OriginalElement>
+  <nodes>
+    <node x="311.0" y="767.0">eventside.rest.BookingRestController</node>
+    <node x="0.0" y="767.0">at.fhv.lab1.WriteSide</node>
+    <node x="0.0" y="341.0">eventside.domain.BookingEvent</node>
+    <node x="375.0" y="0.0">readside.IQueryController</node>
+    <node x="350.0" y="576.0">eventside.BookingRepository</node>
+    <node x="345.0" y="936.0">at.fhv.lab1.EventSide</node>
+    <node x="612.0" y="767.0">writeside.domain.Room</node>
+    <node x="769.0" y="341.0">readside.rest.ReadSideRestController</node>
+    <node x="0.0" y="576.0">at.fhv.lab1.ReadSide</node>
+    <node x="399.0" y="341.0">writeside.domain.Booking</node>
+    <node x="750.0" y="0.0">readside.ReadSideBookingRepository</node>
+    <node x="674.0" y="576.0">writeside.EventPublisher</node>
+    <node x="375.0" y="128.0">readside.QueryController</node>
+    <node x="799.0" y="767.0">readside.ReadSidePortConfigurator</node>
+    <node x="0.0" y="128.0">writeside.CommandController</node>
+    <node x="0.0" y="936.0">writeside.WriteSidePortConfigurator</node>
+    <node x="55.0" y="0.0">writeside.ICommandController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="readside.QueryController" target="readside.IQueryController" relationship="REALIZATION">
+      <point x="0.0" y="-62.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.ICommandController" relationship="REALIZATION">
+      <point x="0.0" y="-84.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.4859903381642512" showDependencies="false" x="549.5" y="507.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

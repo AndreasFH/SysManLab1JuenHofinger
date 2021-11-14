@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/vicih/OneDrive/Desktop/5_Semester_Informatik_BSc/Systemarchitektur/Seminar/Seminar_01/SysManLab1JuenHofinger/src/main/java</OriginalElement>
+  <nodes>
+    <node x="21.127900843880525" y="353.0">eventside.rest.BookingRestController</node>
+    <node x="292.45833333333337" y="506.0">at.fhv.lab1.WriteSide</node>
+    <node x="129.18670886075893" y="93.0">eventside.domain.BookingEvent</node>
+    <node x="1084.375" y="228.0">readside.IQueryController</node>
+    <node x="0.0" y="228.0">eventside.BookingRepository</node>
+    <node x="536.0" y="582.0">at.fhv.lab1.EventSide</node>
+    <node x="948.6033755274256" y="0.0">writeside.domain.Room</node>
+    <node x="882.3030063291136" y="506.0">readside.rest.ReadSideRestController</node>
+    <node x="749.3030063291136" y="506.0">at.fhv.lab1.ReadSide</node>
+    <node x="683.3533755274256" y="93.0">writeside.domain.Booking</node>
+    <node x="706.9280063291136" y="228.0">readside.ReadSideBookingRepository</node>
+    <node x="229.71967299578023" y="228.0">writeside.EventPublisher</node>
+    <node x="886.7916666666666" y="353.0">readside.QueryController</node>
+    <node x="269.0" y="582.0">readside.ReadSidePortConfigurator</node>
+    <node x="239.12790084388052" y="353.0">writeside.CommandController</node>
+    <node x="0.0" y="582.0">writeside.WriteSidePortConfigurator</node>
+    <node x="487.4280063291136" y="228.0">writeside.ICommandController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="at.fhv.lab1.WriteSide" target="writeside.CommandController" relationship="TO_ONE">
+      <point x="-38.66666666666663" y="-15.5" />
+      <point x="311.79166666666674" y="485.0" />
+      <point x="285.1279008438805" y="485.0" />
+      <point x="-46.0" y="15.5" />
+    </edge>
+    <edge source="readside.ReadSideBookingRepository" target="writeside.domain.Room" relationship="TO_MANY">
+      <point x="-78.66666666666669" y="-15.5" />
+      <point x="746.2613396624469" y="206.0" />
+      <point x="457.59467299578023" y="206.0" />
+      <point x="457.59467299578023" y="176.0" />
+      <point x="519.8201476793254" y="176.0" />
+      <point x="519.8201476793254" y="72.0" />
+      <point x="506.35337552742556" y="72.0" />
+      <point x="506.35337552742556" y="52.0" />
+      <point x="963.7700421940922" y="52.0" />
+      <point x="-30.333333333333332" y="15.5" />
+    </edge>
+    <edge source="readside.IQueryController" target="writeside.domain.Booking" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="1164.875" y="156.0" />
+      <point x="736.3533755274256" y="156.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="readside.ReadSideBookingRepository" target="eventside.domain.BookingEvent" relationship="DEPENDENCY">
+      <point x="78.66666666666669" y="-15.5" />
+      <point x="903.5946729957802" y="206.0" />
+      <point x="878.9612341772139" y="206.0" />
+      <point x="878.9612341772139" y="166.0" />
+      <point x="303.4367088607589" y="166.0" />
+      <point x="303.4367088607589" y="156.0" />
+      <point x="246.68670886075893" y="156.0" />
+      <point x="47.0" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="eventside.domain.BookingEvent" relationship="CREATE">
+      <point x="-69.0" y="-15.5" />
+      <point x="262.1279008438805" y="331.0" />
+      <point x="269.4367088607589" y="331.0" />
+      <point x="269.4367088607589" y="311.0" />
+      <point x="198.96967299578023" y="311.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="eventside.domain.BookingEvent" target="writeside.domain.Room" relationship="DEPENDENCY">
+      <point x="35.25" y="-15.5" />
+      <point x="234.93670886075893" y="62.0" />
+      <point x="994.1033755274256" y="62.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="readside.ReadSideBookingRepository" target="writeside.domain.Room" relationship="DEPENDENCY">
+      <point x="78.66666666666669" y="-15.5" />
+      <point x="903.5946729957802" y="206.0" />
+      <point x="878.9612341772139" y="206.0" />
+      <point x="878.9612341772139" y="176.0" />
+      <point x="909.4367088607589" y="176.0" />
+      <point x="909.4367088607589" y="62.0" />
+      <point x="994.1033755274256" y="62.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.ReadSide" target="writeside.domain.Booking" relationship="DEPENDENCY">
+      <point x="-37.66666666666666" y="-15.5" />
+      <point x="768.136339662447" y="485.0" />
+      <point x="600.4280063291136" y="485.0" />
+      <point x="600.4280063291136" y="455.0" />
+      <point x="696.4280063291136" y="455.0" />
+      <point x="696.4280063291136" y="196.0" />
+      <point x="736.3533755274256" y="196.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="readside.rest.ReadSideRestController" target="eventside.domain.BookingEvent" relationship="DEPENDENCY">
+      <point x="-68.33333333333331" y="-15.5" />
+      <point x="916.4696729957802" y="475.0" />
+      <point x="678.4034810126586" y="475.0" />
+      <point x="678.4034810126586" y="425.0" />
+      <point x="447.09467299578023" y="425.0" />
+      <point x="447.09467299578023" y="206.0" />
+      <point x="303.4367088607589" y="206.0" />
+      <point x="303.4367088607589" y="156.0" />
+      <point x="246.68670886075893" y="156.0" />
+      <point x="47.0" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.EventPublisher" relationship="TO_ONE">
+      <point x="-23.0" y="-15.5" />
+      <point x="308.1279008438805" y="331.0" />
+      <point x="319.125" y="331.0" />
+      <point x="319.125" y="311.0" />
+      <point x="339.21967299578023" y="311.0" />
+      <point x="36.5" y="15.5" />
+    </edge>
+    <edge source="readside.QueryController" target="writeside.domain.Booking" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="965.2916666666666" y="331.0" />
+      <point x="1004.0416666666666" y="331.0" />
+      <point x="1004.0416666666666" y="196.0" />
+      <point x="736.3533755274256" y="196.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.ReadSide" target="readside.ReadSideBookingRepository" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="805.8030063291136" y="485.0" />
+      <point x="830.2397151898725" y="485.0" />
+      <point x="830.2397151898725" y="331.0" />
+      <point x="861.6279008438805" y="331.0" />
+      <point x="861.6279008438805" y="281.0" />
+      <point x="883.9280063291136" y="281.0" />
+      <point x="59.0" y="15.5" />
+    </edge>
+    <edge source="readside.rest.ReadSideRestController" target="readside.QueryController" relationship="DEPENDENCY">
+      <point x="-68.33333333333331" y="-15.5" />
+      <point x="916.4696729957802" y="475.0" />
+      <point x="678.4034810126586" y="475.0" />
+      <point x="678.4034810126586" y="435.0" />
+      <point x="673.1534810126586" y="435.0" />
+      <point x="673.1534810126586" y="405.0" />
+      <point x="926.0416666666666" y="405.0" />
+      <point x="-39.25" y="15.5" />
+    </edge>
+    <edge source="eventside.rest.BookingRestController" target="eventside.domain.BookingEvent" relationship="DEPENDENCY">
+      <point x="49.5" y="-15.5" />
+      <point x="169.62790084388052" y="331.0" />
+      <point x="127.90638185653916" y="331.0" />
+      <point x="127.90638185653916" y="321.0" />
+      <point x="209.96967299578023" y="321.0" />
+      <point x="209.96967299578023" y="206.0" />
+      <point x="303.4367088607589" y="206.0" />
+      <point x="303.4367088607589" y="156.0" />
+      <point x="246.68670886075893" y="156.0" />
+      <point x="47.0" y="15.5" />
+    </edge>
+    <edge source="readside.QueryController" target="readside.IQueryController" relationship="REALIZATION">
+      <point x="52.333333333333314" y="-15.5" />
+      <point x="1017.6249999999999" y="311.0" />
+      <point x="1164.875" y="311.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.domain.Room" relationship="DEPENDENCY">
+      <point x="69.0" y="-15.5" />
+      <point x="400.1279008438805" y="331.0" />
+      <point x="685.9280063291136" y="331.0" />
+      <point x="685.9280063291136" y="301.0" />
+      <point x="1073.875" y="301.0" />
+      <point x="1073.875" y="62.0" />
+      <point x="994.1033755274256" y="62.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="readside.ReadSideBookingRepository" target="writeside.domain.Booking" relationship="CREATE">
+      <point x="-1.4210854715202004E-14" y="-15.5" />
+      <point x="824.9280063291136" y="186.0" />
+      <point x="898.9367088607589" y="186.0" />
+      <point x="898.9367088607589" y="146.0" />
+      <point x="771.6867088607589" y="146.0" />
+      <point x="35.33333333333337" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.WriteSide" target="writeside.CommandController" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="350.45833333333337" y="485.0" />
+      <point x="377.1279008438805" y="485.0" />
+      <point x="46.0" y="15.5" />
+    </edge>
+    <edge source="readside.QueryController" target="readside.ReadSideBookingRepository" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="965.2916666666666" y="331.0" />
+      <point x="1004.0416666666666" y="331.0" />
+      <point x="1004.0416666666666" y="291.0" />
+      <point x="815.5029008438805" y="291.0" />
+      <point x="815.5029008438805" y="281.0" />
+      <point x="765.9280063291136" y="281.0" />
+      <point x="-59.0" y="15.5" />
+    </edge>
+    <edge source="writeside.EventPublisher" target="eventside.domain.BookingEvent" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="303.4367088607589" y="156.0" />
+      <point x="246.68670886075893" y="156.0" />
+      <point x="47.0" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.domain.Booking" relationship="DEPENDENCY">
+      <point x="69.0" y="-15.5" />
+      <point x="400.1279008438805" y="331.0" />
+      <point x="685.9280063291136" y="331.0" />
+      <point x="685.9280063291136" y="196.0" />
+      <point x="736.3533755274256" y="196.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="readside.QueryController" target="writeside.domain.Room" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="965.2916666666666" y="331.0" />
+      <point x="1004.0416666666666" y="331.0" />
+      <point x="1004.0416666666666" y="321.0" />
+      <point x="1255.875" y="321.0" />
+      <point x="1255.875" y="62.0" />
+      <point x="994.1033755274256" y="62.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="readside.rest.ReadSideRestController" target="readside.ReadSideBookingRepository" relationship="DEPENDENCY">
+      <point x="-68.33333333333331" y="-15.5" />
+      <point x="916.4696729957802" y="475.0" />
+      <point x="678.4034810126586" y="475.0" />
+      <point x="678.4034810126586" y="425.0" />
+      <point x="819.2397151898725" y="425.0" />
+      <point x="819.2397151898725" y="331.0" />
+      <point x="815.5029008438805" y="331.0" />
+      <point x="815.5029008438805" y="281.0" />
+      <point x="765.9280063291136" y="281.0" />
+      <point x="-59.0" y="15.5" />
+    </edge>
+    <edge source="readside.rest.ReadSideRestController" target="writeside.domain.Room" relationship="CREATE">
+      <point x="68.33333333333331" y="-15.5" />
+      <point x="1053.136339662447" y="455.0" />
+      <point x="1336.1534810126586" y="455.0" />
+      <point x="1336.1534810126586" y="72.0" />
+      <point x="1324.1033755274254" y="72.0" />
+      <point x="1324.1033755274254" y="52.0" />
+      <point x="1024.436708860759" y="52.0" />
+      <point x="30.33333333333333" y="15.5" />
+    </edge>
+    <edge source="readside.QueryController" target="readside.ReadSideBookingRepository" relationship="TO_ONE">
+      <point x="-52.33333333333337" y="-15.5" />
+      <point x="912.9583333333333" y="331.0" />
+      <point x="861.6279008438805" y="331.0" />
+      <point x="861.6279008438805" y="281.0" />
+      <point x="883.9280063291136" y="281.0" />
+      <point x="59.0" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.ReadSide" target="readside.QueryController" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="805.8030063291136" y="485.0" />
+      <point x="830.2397151898725" y="485.0" />
+      <point x="830.2397151898725" y="425.0" />
+      <point x="1004.5416666666666" y="425.0" />
+      <point x="39.25" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.ReadSide" target="readside.ReadSideBookingRepository" relationship="DEPENDENCY">
+      <point x="-37.66666666666666" y="-15.5" />
+      <point x="768.136339662447" y="485.0" />
+      <point x="600.4280063291136" y="485.0" />
+      <point x="600.4280063291136" y="455.0" />
+      <point x="800.1666666666666" y="455.0" />
+      <point x="800.1666666666666" y="331.0" />
+      <point x="815.5029008438805" y="331.0" />
+      <point x="815.5029008438805" y="281.0" />
+      <point x="765.9280063291136" y="281.0" />
+      <point x="-59.0" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.domain.Booking" relationship="TO_MANY">
+      <point x="-23.0" y="-15.5" />
+      <point x="308.1279008438805" y="331.0" />
+      <point x="319.125" y="331.0" />
+      <point x="319.125" y="311.0" />
+      <point x="476.9280063291136" y="311.0" />
+      <point x="476.9280063291136" y="196.0" />
+      <point x="539.1534810126586" y="196.0" />
+      <point x="539.1534810126586" y="156.0" />
+      <point x="701.0200421940922" y="156.0" />
+      <point x="-35.333333333333314" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.ReadSide" target="writeside.domain.Room" relationship="CREATE">
+      <point x="37.66666666666666" y="-15.5" />
+      <point x="843.4696729957802" y="445.0" />
+      <point x="1324.1033755274254" y="445.0" />
+      <point x="1324.1033755274254" y="52.0" />
+      <point x="1024.436708860759" y="52.0" />
+      <point x="30.33333333333333" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.WriteSide" target="writeside.domain.Room" relationship="CREATE">
+      <point x="38.666666666666686" y="-15.5" />
+      <point x="389.1250000000001" y="465.0" />
+      <point x="1199.7397151898726" y="465.0" />
+      <point x="1199.7397151898726" y="435.0" />
+      <point x="1266.875" y="435.0" />
+      <point x="1266.875" y="72.0" />
+      <point x="1324.1033755274254" y="72.0" />
+      <point x="1324.1033755274254" y="52.0" />
+      <point x="1024.436708860759" y="52.0" />
+      <point x="30.33333333333333" y="15.5" />
+    </edge>
+    <edge source="writeside.domain.Booking" target="writeside.domain.Room" relationship="DEPENDENCY">
+      <point x="26.5" y="-15.5" />
+      <point x="762.8533755274256" y="62.0" />
+      <point x="994.1033755274256" y="62.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.WriteSide" target="writeside.domain.Booking" relationship="CREATE">
+      <point x="38.666666666666686" y="-15.5" />
+      <point x="389.1250000000001" y="465.0" />
+      <point x="1199.7397151898726" y="465.0" />
+      <point x="1199.7397151898726" y="435.0" />
+      <point x="1054.2916666666665" y="435.0" />
+      <point x="1054.2916666666665" y="186.0" />
+      <point x="898.9367088607589" y="186.0" />
+      <point x="898.9367088607589" y="146.0" />
+      <point x="771.6867088607589" y="146.0" />
+      <point x="35.33333333333337" y="15.5" />
+    </edge>
+    <edge source="readside.IQueryController" target="writeside.domain.Room" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="1164.875" y="62.0" />
+      <point x="994.1033755274256" y="62.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="writeside.domain.Booking" target="writeside.domain.Room" relationship="TO_ONE">
+      <point x="-26.5" y="-15.5" />
+      <point x="709.8533755274256" y="72.0" />
+      <point x="506.35337552742556" y="72.0" />
+      <point x="506.35337552742556" y="52.0" />
+      <point x="963.7700421940922" y="52.0" />
+      <point x="-30.333333333333332" y="15.5" />
+    </edge>
+    <edge source="readside.rest.ReadSideRestController" target="readside.QueryController" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="984.8030063291136" y="485.0" />
+      <point x="980.1279008438805" y="485.0" />
+      <point x="980.1279008438805" y="435.0" />
+      <point x="1004.5416666666666" y="435.0" />
+      <point x="39.25" y="15.5" />
+    </edge>
+    <edge source="at.fhv.lab1.ReadSide" target="readside.QueryController" relationship="DEPENDENCY">
+      <point x="-37.66666666666666" y="-15.5" />
+      <point x="768.136339662447" y="485.0" />
+      <point x="600.4280063291136" y="485.0" />
+      <point x="600.4280063291136" y="445.0" />
+      <point x="673.1534810126586" y="445.0" />
+      <point x="673.1534810126586" y="405.0" />
+      <point x="926.0416666666666" y="405.0" />
+      <point x="-39.25" y="15.5" />
+    </edge>
+    <edge source="readside.ReadSideBookingRepository" target="writeside.domain.Booking" relationship="TO_MANY">
+      <point x="-78.66666666666669" y="-15.5" />
+      <point x="746.2613396624469" y="206.0" />
+      <point x="457.59467299578023" y="206.0" />
+      <point x="457.59467299578023" y="186.0" />
+      <point x="539.1534810126586" y="186.0" />
+      <point x="539.1534810126586" y="156.0" />
+      <point x="701.0200421940922" y="156.0" />
+      <point x="-35.333333333333314" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.EventPublisher" relationship="CREATE">
+      <point x="-69.0" y="-15.5" />
+      <point x="262.1279008438805" y="331.0" />
+      <point x="269.4367088607589" y="331.0" />
+      <point x="269.4367088607589" y="311.0" />
+      <point x="266.21967299578023" y="311.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="eventside.BookingRepository" target="eventside.domain.BookingEvent" relationship="TO_MANY">
+      <point x="-43.75" y="-15.5" />
+      <point x="43.75" y="196.0" />
+      <point x="152.68670886075893" y="196.0" />
+      <point x="-47.0" y="15.5" />
+    </edge>
+    <edge source="eventside.domain.BookingEvent" target="writeside.domain.Room" relationship="TO_ONE">
+      <point x="-35.25" y="-15.5" />
+      <point x="164.43670886075893" y="72.0" />
+      <point x="506.35337552742556" y="72.0" />
+      <point x="506.35337552742556" y="52.0" />
+      <point x="963.7700421940922" y="52.0" />
+      <point x="-30.333333333333332" y="15.5" />
+    </edge>
+    <edge source="eventside.rest.BookingRestController" target="eventside.BookingRepository" relationship="DEPENDENCY">
+      <point x="49.5" y="-15.5" />
+      <point x="169.62790084388052" y="331.0" />
+      <point x="127.90638185653916" y="331.0" />
+      <point x="127.90638185653916" y="321.0" />
+      <point x="131.25" y="321.0" />
+      <point x="43.75" y="15.5" />
+    </edge>
+    <edge source="readside.rest.ReadSideRestController" target="readside.ReadSideBookingRepository" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="984.8030063291136" y="485.0" />
+      <point x="980.1279008438805" y="485.0" />
+      <point x="980.1279008438805" y="415.0" />
+      <point x="876.2916666666666" y="415.0" />
+      <point x="876.2916666666666" y="331.0" />
+      <point x="861.6279008438805" y="331.0" />
+      <point x="861.6279008438805" y="281.0" />
+      <point x="883.9280063291136" y="281.0" />
+      <point x="59.0" y="15.5" />
+    </edge>
+    <edge source="eventside.rest.BookingRestController" target="eventside.BookingRepository" relationship="TO_ONE">
+      <point x="-49.5" y="-15.5" />
+      <point x="70.62790084388052" y="331.0" />
+      <point x="43.75" y="331.0" />
+      <point x="-43.75" y="15.5" />
+    </edge>
+    <edge source="eventside.BookingRepository" target="eventside.domain.BookingEvent" relationship="DEPENDENCY">
+      <point x="43.75" y="-15.5" />
+      <point x="131.25" y="206.0" />
+      <point x="303.4367088607589" y="206.0" />
+      <point x="303.4367088607589" y="156.0" />
+      <point x="246.68670886075893" y="156.0" />
+      <point x="47.0" y="15.5" />
+    </edge>
+    <edge source="writeside.CommandController" target="writeside.ICommandController" relationship="REALIZATION">
+      <point x="23.0" y="-15.5" />
+      <point x="354.1279008438805" y="321.0" />
+      <point x="581.4280063291136" y="321.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="writeside.ICommandController" target="writeside.domain.Booking" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="581.4280063291136" y="196.0" />
+      <point x="736.3533755274256" y="196.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6779661016949152" showDependencies="true" x="668.5" y="306.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
